@@ -11,12 +11,20 @@ require('dotenv').config();
 
 const mongoURI = process.env.MONGO_URI; 
 
+const corsOptions = {
+  origin: 'https://bill-splitter-app-five.vercel.app/',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, 
+};
+
+
 const app = express();
 app.use(express.json());
-app.use(cors()); // Enable CORS for all routes
+app.use(cors(corsOptions)); // Enable CORS for all routes
+
 
 // Routes
-app.use('/api/events', eventRoutes);
+app.use('/api/events',cors(corsOptions), eventRoutes);
 // app.use('/api/expenses',expenseRoutes)
 
 // MongoDB connection
