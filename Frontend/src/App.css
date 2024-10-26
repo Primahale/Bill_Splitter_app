@@ -1,0 +1,66 @@
+
+body {
+  background-color: rgb(245, 239, 239); 
+  color: black; 
+}
+.App {
+  background-color: #db6565;
+  color: #000000; 
+  transition: background-color 0.5s, color 0.5s; 
+}
+
+
+body.dark-mode {
+  background-color: #121212; 
+  color: rgb(228, 189, 189);
+}
+
+.App.dark {
+  background-color: #181818; 
+  color: #b51818;
+  transition: background-color 0.5s, color 0.5s; 
+}
+
+.navbar {
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+
+.navbar-light {
+  background-color: #080808; 
+  color: black; 
+}
+
+/* Dark mode navbar */
+.navbar-dark {
+  background-color: #0c0c0c;
+  color: white;
+}
+
+
+.navbar .nav-link {
+  color: inherit;
+}
+
+
+.navbar .nav-link:hover {
+  text-decoration: underline; 
+}
+
+.navbar .mx-auto {
+  flex-grow: 1; 
+  display: flex; 
+  justify-content: center; 
+}
+.navbar-nav {
+  width: 100%; 
+  display: flex;
+  /* margin-left: px; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 1rem;
+  text-align: center;
+}

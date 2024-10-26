@@ -1,0 +1,55 @@
+.settle-balances-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.expenses-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.expense-details {
+    flex-grow: 1;
+}
+
+.settle-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settle-button:hover {
+    background-color: #0056b3;
+}
