@@ -20,11 +20,18 @@ const corsOptions = {
 
 const app = express();
 app.use(express.json());
-app.use(cors(corsOptions)); // Enable CORS for all routes
+app.options('*', cors()); 
+app.use(cors(corsOptions)); 
+app.use((req, res, next) => {
+  res.on('finish', () => {
+    console.log('CORS Headers:', res.getHeaders());
+  });
+  next();
+});
 
 
 // Routes
-app.use('/api/events',cors(corsOptions), eventRoutes);
+app.use('/api/events', eventRoutes);
 // app.use('/api/expenses',expenseRoutes)
 
 // MongoDB connection
