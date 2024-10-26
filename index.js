@@ -12,7 +12,7 @@ require('dotenv').config();
 const mongoURI = process.env.MONGO_URI; 
 
 const corsOptions = {
-  origin: 'https://bill-splitter-app-five.vercel.app/',
+  origin: 'https://bill-splitter-app-five.vercel.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, 
 };
