@@ -47,16 +47,12 @@ const eventSchema = new mongoose.Schema({
   eventName: { type: String, required: true },
     participants: [participantSchema],
     description: { type: String, required: true },
-    payer: {type: String, require: true}, // Stores the name of the person who paid the total bill},
+    payer: {type: String, require: true}, 
     expenses: [expenseSchema],
     totalBill: { type: Number, require: true} // Auto-calculated from expenses
 },{ timestamps: true });
 
 // Create the Event model
 const Event = mongoose.model('Event', eventSchema);
-// Create the User model
-// const User = mongoose.model('User', userSchema);
-
-// const Expense = mongoose.model('Expense',expenseSchema)
 
 module.exports = Event;

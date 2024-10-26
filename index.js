@@ -7,6 +7,9 @@ const Event = require('./models/Event'); // Ensure you have the correct path to 
 const Expense = require('./models/Expense')
 const eventRoutes = require('./routes/eventRoutes')
 const expenseRoutes = require('./routes/expenseRoutes')
+require('dotenv').config();
+
+const mongoURI = process.env.MONGO_URI; 
 
 const app = express();
 app.use(express.json());
@@ -17,7 +20,7 @@ app.use('/api/events', eventRoutes);
 // app.use('/api/expenses',expenseRoutes)
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/bill-splitter', { 
+mongoose.connect(mongoURI, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
 })
